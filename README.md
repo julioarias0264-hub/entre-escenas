@@ -67,5 +67,5 @@ Para subirla a Vercel:
 3. Deja `npm run build` como comando y `dist` como carpeta de salida.
 4. Cuando la app esté publicada, pega aquí los dos enlaces.
 
-- GitHub: pendiente.
+- GitHub: https://github.com/julioarias0264-hub/entre-escenas
 - App publicada: pendiente.
