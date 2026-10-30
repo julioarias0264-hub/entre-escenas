@@ -7,6 +7,15 @@ defineProps({
 })
 
 const emit = defineEmits(['toggle-status', 'edit', 'remove'])
+
+const ratingFormatter = new Intl.NumberFormat('es', {
+  minimumFractionDigits: 1,
+  maximumFractionDigits: 1,
+})
+
+function formatRating(rating) {
+  return ratingFormatter.format(Number(rating))
+}
 </script>
 
 <template>
@@ -41,11 +50,11 @@ const emit = defineEmits(['toggle-status', 'edit', 'remove'])
     <div class="media-info">
       <div class="media-title-line">
         <h2>{{ media.title }}</h2>
-        <span class="media-rating" :aria-label="`Calificación ${media.rating} de 5`">
+        <span class="media-rating" :aria-label="`Calificación ${formatRating(media.rating)} de 5`">
           <svg viewBox="0 0 20 20" aria-hidden="true">
             <path d="m10 2.5 2.2 4.6 5.1.7-3.7 3.6.9 5.1-4.5-2.4-4.5 2.4.9-5.1-3.7-3.6 5.1-.7L10 2.5Z" />
           </svg>
-          {{ Number(media.rating).toFixed(1) }}
+          {{ formatRating(media.rating) }}
         </span>
       </div>
       <p class="media-meta">{{ media.genre }} <span aria-hidden="true">·</span> {{ media.year }}</p>
