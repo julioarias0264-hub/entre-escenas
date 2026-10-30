@@ -68,4 +68,4 @@ Para subirla a Vercel:
 4. Cuando la app esté publicada, pega aquí los dos enlaces.
 
 - GitHub: https://github.com/julioarias0264-hub/entre-escenas
-- App publicada: pendiente.
+- App publicada: https://entre-escenas.vercel.app
